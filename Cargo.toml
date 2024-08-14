@@ -1,0 +1,22 @@
+[package]
+name = "bmbp_http_type"
+version = "0.0.0"
+edition = "2021"
+authors = ["bmbp<rs_bmbp.163.com>"]
+description = "BMBP"
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/bmbper/bmbp_http_type"
+repository = "https://github.com/bmbper/bmbp_http_type"
+documentation = "https://github.com/bmbper/bmbp_http_type"
+[dependencies]
+salvo = { version = "0.68.5", features = [
+    "default",
+    "serve-static",
+    "cors",
+    "size-limiter",
+    "logging",
+] }
+serde = { version = "1.0.204", features = ["derive"] }
+serde_json = "1.0.10"
+serde_repr = "0.1.19"
