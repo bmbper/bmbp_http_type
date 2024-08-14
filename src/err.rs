@@ -4,7 +4,7 @@ use salvo::prelude::Json;
 use serde::Serialize;
 use crate::RespVo;
 
-type BmbpResp<T> = Result<T, BmbpRespErr>;
+pub type BmbpResp<T> = Result<T, BmbpRespErr>;
 
 #[derive(Debug, Clone, Default, Serialize)]
 #[serde(rename_all = "camelCase")]
