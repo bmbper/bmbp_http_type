@@ -1,3 +1,5 @@
+use salvo::{async_trait, Depot, Request, Response, Writer};
+use salvo::prelude::Json;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Default, Clone, Deserialize, Serialize)]
@@ -100,3 +102,13 @@ impl<T> RespVo<T> where T: Serialize + Clone + Default + Send + Sync {
     }
 }
 
+
+#[async_trait]
+impl<T> Writer for RespVo<T>
+    where
+        T: Clone + Default + Serialize + Send + Sync,
+{
+    async fn write(self, _req: &mut Request, _depot: &mut Depot, res: &mut Response) {
+        res.render(Json(self))
+    }
+}
