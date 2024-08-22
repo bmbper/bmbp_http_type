@@ -1,6 +1,6 @@
 [package]
 name = "bmbp_http_type"
-version = "0.0.3"
+version = "0.0.4"
 edition = "2021"
 authors = ["bmbp<rs_bmbp.163.com>"]
 description = "BMBP"
@@ -10,7 +10,7 @@ homepage = "https://github.com/bmbper/bmbp_http_type"
 repository = "https://github.com/bmbper/bmbp_http_type"
 documentation = "https://github.com/bmbper/bmbp_http_type"
 [dependencies]
-salvo = { version = "0.68.5", features = [
+salvo = { version = "0.69.0", features = [
     "default",
     "serve-static",
     "cors",

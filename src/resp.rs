@@ -1,5 +1,4 @@
-use salvo::{async_trait, Depot, Request, Response, Writer};
-use salvo::prelude::Json;
+use salvo::prelude::*;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Default, Clone, Deserialize, Serialize)]
