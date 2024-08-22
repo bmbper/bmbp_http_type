@@ -95,7 +95,7 @@ impl<T> RespVo<T> where T: Serialize + Clone + Default + Send + Sync {
     }
     pub fn fail_msg(msg: String) -> Self {
         RespVo {
-            code: 0,
+            code: -1,
             msg,
             data: None,
         }
