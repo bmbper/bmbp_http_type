@@ -134,7 +134,7 @@ dependencies = [
 
 [[package]]
 name = "bmbp_http_type"
-version = "0.0.4"
+version = "0.0.5"
 dependencies = [
  "salvo",
  "serde",
